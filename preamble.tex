@@ -1,0 +1,51 @@
+% !TeX program = lualatex
+% Layout
+\documentclass[10pt]{book}
+\usepackage[paperwidth=6.5in,paperheight=9.5in,top=0.6in,bottom=0.7in,left=0.4in,right=0.4in,bindingoffset=0.2in,headheight=0in]{geometry}
+\usepackage{setspace} % for line spacing
+\usepackage{microtype} % helps with formatting
+\usepackage{emptypage}
+\usepackage{scripture}
+\usepackage[greek]{babel}
+\usepackage{parskip}
+\setlength{\parskip}{3mm plus.75mm minus.75mm}
+\usepackage[all]{nowidow}
+\usepackage{ragged2e} % Nicer ragged edges. Use \Center to get nice balanced lines
+\usepackage{fontspec}
+\setmainfont{Gentium Plus}
+\flushbottom
+\frenchspacing % stops extra space after a period or colon
+\hyphenpenalty=3000
+\emergencystretch=3pt
+\setlength{\parindent}{0pt} % Disable paragraph indentation
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}} % Remove "Chapter _" from running headers
+
+\usepackage{bookmark} %add PDF bookmarks for each \chapter
+\usepackage{hyperref} % Make the TOC clickable
+
+\usepackage{titlesec}
+% Remove chapter numbering
+\renewcommand{\thechapter}{}
+% Show chapter titles with a line after them
+\titleformat{\chapter}[display]
+{\filcenter\normalfont\Huge}
+{}
+{0pt}
+{}
+[\vspace{.5ex}%
+\rule{1.5in}{0.4pt}]
+
+% Add the multicol package for two-column layout
+\usepackage{multicol}
+\setlength{\columnsep}{.4cm} % Set the columnn width
+
+% Adjust spacing and format of TOC 
+\usepackage{tocloft}
+\renewcommand{\cftchapfont}{\normalfont} % Set chapter entries to normal font
+\renewcommand{\cftchappagefont}{\normalfont} % Set chapter page numbers to normal font
+\renewcommand{\cftdotsep}{2} % change the default spacing of dots
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % Add leader dots for chapters
+\setlength{\cftbeforechapskip}{1pt} % Adjust the space before each TOC chapter entry
+
+

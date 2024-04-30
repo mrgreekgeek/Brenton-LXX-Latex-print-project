@@ -1,0 +1,19 @@
+\XeTeXlinebreaklocale "grc"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+\XeTeXlinebreakpenalty = 10
+\newcommand\ScriptureFontFace{DejaVu Serif}%
+\newcommand\OtherFontFace{DejaVuSans}%
+\newcommand\HeaderFontFace{DejaVuSans}%
+\input{ntp}%
+\input{haiola}%
+\begin{document}%
+\makeatletter\def\@evenhead{{\HDRF\HeaderFont\rightmark\hfil\thepage\hfil\leftmark}}\def\@oddhead{{\HDRF\HeaderFont\rightmark\hfil\thepage\hfil\leftmark}}\makeatother\frontmatter\pagenumbering{roman}%
+\thispagestyle{empty}\markboth{\HeaderFont }{\HeaderFont }%
+\resizebox{!}{\textwidth}{\includegraphics{cover.png}}
+\vfill\eject
+\input{CPR}
+\tableofcontents\clearpage
+\setcounter{page}{1}\pagenumbering{arabic}\mainmatter%
+\input{PSA_src}
+\clearpage
+\end{document}

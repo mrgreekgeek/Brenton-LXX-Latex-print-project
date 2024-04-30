@@ -1,0 +1,8 @@
+old/
+*.aux
+*.toc
+*.log
+psalm.pdf
+minor.pdf
+minor.tex
+psalm.tex

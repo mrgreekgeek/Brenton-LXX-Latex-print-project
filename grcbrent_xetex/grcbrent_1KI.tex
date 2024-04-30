@@ -1,0 +1,15 @@
+\XeTeXlinebreaklocale "grc"
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
+\XeTeXlinebreakpenalty = 10
+\newcommand\ScriptureFontFace{DejaVu Serif}%
+\newcommand\OtherFontFace{DejaVuSans}%
+\newcommand\HeaderFontFace{DejaVuSans}%
+\input{12pta5}
+\input{haiola}
+\begin{document}
+\makeatletter\def\@evenhead{{\HDRF\HeaderFont\rightmark\hfil\thepage\hfil\leftmark}}\def\@oddhead{{\HDRF\HeaderFont\rightmark\hfil\thepage\hfil\leftmark}}\makeatother\frontmatter\pagenumbering{roman}%
+\input{1KI_src}
+\vfill\eject
+\input{CPR}
+\clearpage
+\end{document}
