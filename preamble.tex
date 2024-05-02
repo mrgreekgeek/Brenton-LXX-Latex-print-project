@@ -5,7 +5,6 @@
 \usepackage{setspace} % for line spacing
 \usepackage{microtype} % helps with formatting
 \usepackage{emptypage}
-\usepackage{scripture}
 \usepackage[greek]{babel}
 % \usepackage{parskip}
 % \setlength{\parskip}{3mm plus.75mm minus.75mm}
@@ -17,12 +16,13 @@
 \frenchspacing % stops extra space after a period or colon
 \hyphenpenalty=3000
 \emergencystretch=3pt
-\setlength{\parindent}{.25in} % Disable paragraph indentation
+\setlength{\parindent}{.2in} % Disable paragraph indentation
 
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}} % Remove "Chapter _" from running headers
 
 \usepackage{bookmark} %add PDF bookmarks for each \chapter
 \usepackage{hyperref} % Make the TOC clickable
+
 
 \usepackage{titlesec}
 % Remove chapter numbering
@@ -48,4 +48,18 @@
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % Add leader dots for chapters
 \setlength{\cftbeforechapskip}{1pt} % Adjust the space before each TOC chapter entry
 
+\newcommand{\psalmheading}[1]{%
+    \par\vspace{4pt}%
+    \begin{Center}%
+        {#1}%
+    \end{Center}%
+    \par\vspace{2pt}%
+}
 
+\newcommand{\vs}[1]{%
+    \begin{textsuperscript}%
+        {#1}%
+    \end{textsuperscript}%
+}
+
+\newcommand{\ch}[1]{\textbf{#1}}
