@@ -56,10 +56,21 @@
     \par\vspace{2pt}%
 }
 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\rightmark}
+\renewcommand{\headrulewidth}{0.2pt}
+
 \newcommand{\vs}[1]{%
     \begin{textsuperscript}%
         {#1}%
     \end{textsuperscript}%
 }
 
-\newcommand{\ch}[1]{\textbf{#1}}
+\newcommand{\ch}[1]{%
+    \markboth{Chapter #1}{}%
+    \textbf{#1}%
+}
