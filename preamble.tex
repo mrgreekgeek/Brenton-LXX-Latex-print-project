@@ -10,6 +10,8 @@
 % \setlength{\parskip}{3mm plus.75mm minus.75mm}
 \usepackage[all]{nowidow}
 \usepackage{ragged2e} % Nicer ragged edges. Use \Center to get nice balanced lines
+\usepackage{bookmark} %add PDF bookmarks for each \chapter
+\usepackage{hyperref} % Make the TOC clickable
 \usepackage{fontspec}
 \setmainfont{Gentium Plus}
 \flushbottom
@@ -18,23 +20,13 @@
 \emergencystretch=3pt
 \setlength{\parindent}{.2in} % Disable paragraph indentation
 
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}} % Remove "Chapter _" from running headers
-
-\usepackage{bookmark} %add PDF bookmarks for each \chapter
-\usepackage{hyperref} % Make the TOC clickable
-
-
 \usepackage{titlesec}
 % Remove chapter numbering
 \renewcommand{\thechapter}{}
 % Show chapter titles with a line after them
 \titleformat{\chapter}[display]
-{\filcenter\normalfont\Huge}
-{}
-{0pt}
-{}
-[\vspace{.5ex}%
-\rule{1.5in}{0.4pt}]
+{\filcenter\normalfont\Huge}{}{0pt}{}
+[\vspace{.5ex}\rule{1.5in}{0.4pt}]
 
 % Add the multicol package for two-column layout
 \usepackage{multicol}
