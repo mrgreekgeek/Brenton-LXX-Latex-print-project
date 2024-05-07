@@ -37,6 +37,13 @@ with open(sys.argv[1], "r", encoding="utf-8") as input:
         #for key, value in book_names.items():
             #latex = re.sub(key + " 1:1 ", "\n\\\chapter{" + value + "}\n\n\\\ch{1}", latex)
 
+        # Fix typos/issues in the source text
+        latex = re.sub(r',,', r',', latex, flags=re.M)              # Exodus 33:13
+        latex = re.sub(r'ʼΑλλʼ', r'Ἀλλ’', latex, flags=re.M)        # Psalm 1:2
+        latex = re.sub(r'(\\par \}\{\\PP )(Ὁ Θεὸς ἔστη ἐν συναγωγῇ θεῶν,)', r'\1\\VS{2}\2', latex, flags=re.M) # Fix missing verse number from Psalm 81:2
+        latex = re.sub(r'(\\par \}\{\\PP )(Κλίνον Κύριε τὸ οὖς σου,)', r'\1\\VS{2}\2', latex, flags=re.M) # Fix missing verse number from Psalm 85:2
+        latex = re.sub(r'\n\\VS\{2\}(ὁπότε ἐνεπύρισε .*?\.)', r' \1', latex) # Remove verse number from Psalm 59 header
+
         # Remove short book names from verse numbers
         latex = re.sub(r'^[A-Z]+ (\d+:\d+ )', r'\1', latex, flags=re.M)
         latex = re.sub(r'\\NormalFont\\ShortTitle\{.*?\}', r'', latex, flags=re.M)
