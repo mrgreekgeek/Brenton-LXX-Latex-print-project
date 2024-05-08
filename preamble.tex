@@ -1,7 +1,7 @@
 % !TeX program = lualatex
 % Layout
 \documentclass[10pt,openany]{book}
-\usepackage[paperwidth=6.5in,paperheight=9.5in,top=0.6in,bottom=0.7in,left=0.4in,right=0.4in,bindingoffset=0.2in,headheight=0in]{geometry}
+\usepackage[paperwidth=6.5in,paperheight=9.5in,top=0.3in,bottom=0.7in,left=0.4in,right=0.4in,bindingoffset=0.2in,includehead,headsep=7pt]{geometry}
 \usepackage{setspace} % for line spacing
 \usepackage{microtype} % helps with formatting
 \usepackage{emptypage}
@@ -50,10 +50,10 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE,RO]{\thepage}
 \fancyhead[LO]{\leftmark}
 \fancyhead[RE]{\rightmark}
-\renewcommand{\headrulewidth}{0.2pt}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
 
 \newcommand{\vs}[1]{%
     \begin{textsuperscript}%
