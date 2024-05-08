@@ -18,7 +18,7 @@
 \frenchspacing % stops extra space after a period or colon
 \hyphenpenalty=3000
 \emergencystretch=3pt
-\setlength{\parindent}{.2in} % Disable paragraph indentation
+\setlength{\parindent}{.2in} % Set paragraph indentation
 
 \usepackage{titlesec}
 % Remove chapter numbering
@@ -41,11 +41,10 @@
 \setlength{\cftbeforechapskip}{1pt} % Adjust the space before each TOC chapter entry
 
 \newcommand{\psalmheading}[1]{%
-    \par\vspace{4pt}%
     \begin{Center}%
         {#1}%
     \end{Center}%
-    \par\vspace{2pt}%
+    \penalty10000% Don't break after this heading
 }
 
 \usepackage{fancyhdr}
