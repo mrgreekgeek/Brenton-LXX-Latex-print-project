@@ -18,7 +18,7 @@ HEAD = r"""\input{preamble.tex}
 FOOT = r"""\end{multicols} % End two-column layout
 \vfill
 \setlength{\parindent}{0cm}
-\fontsize{8}{10}\selectfont{This work is in the public domain. \\The source is available at: \underline{https://ebible.org/Scriptures/details.php?id=grcbrent}.}
+\fontsize{8}{10}\selectfont{This work is in the public domain. \\The text source is available at: \underline{https://ebible.org/Scriptures/details.php?id=grcbrent}. \\This PDF file created by MrGreekGeek, available from \underline{https://github.com/mrgreekgeek/Brenton-LXX-Latex-print-project}.}
 
 \end{spacing}
 \end{document}"""
