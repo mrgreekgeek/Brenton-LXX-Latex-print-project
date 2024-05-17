@@ -13,7 +13,7 @@ The main files in this repo are `Brenton.tex` and `Brenton.pdf`. If you want to 
 The digital Brenton LXX text is sourced from [ebible.org](https://ebible.org/Scriptures/details.php?id=grcbrent) and is in the public domain. (The exact source for the files in `grcbrent_xetex` is the [ebible XeTeX file](https://ebible.org/Scriptures/grcbrent_xetex.zip). You can use the script `concat.py` to merge each individual book into one file (concatenated.tex) as we did here.) All of the code and `.tex` formatting are licensed [CC0-1.0 (public domain)](https://github.com/mrgreekgeek/Brenton-LXX-Latex-print-project/blob/main/LICENSE) and may be used and copied freely. May God get all the glory! 
 
 ## TODO 
-- [ ] Add book names to the running header
+- [x] Add book names to the running header
 - [ ] Add chapter:verse references to the running header like most Bibles have 
 - [ ] Keep all Psalm headings with the following paragraphs
 - [ ] Add front matter (copyright, editor, year, etc)
