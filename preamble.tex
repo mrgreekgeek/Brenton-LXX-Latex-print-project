@@ -50,10 +50,11 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LO]{\leftmark}
-\fancyhead[RE]{\rightmark}
+\fancyhead[ER,LO]{\leftmark}
+\fancyhead[EL,OR]{\rightmark} % the chapter numbers defined in \ch
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}} % Put the name of the chapter in the header
 
 \newcommand{\vs}[1]{%
     \begin{textsuperscript}%
@@ -62,6 +63,6 @@
 }
 
 \newcommand{\ch}[1]{%
-    \markboth{Chapter #1}{}%
+    \markright{Chapter #1}%
     \textbf{#1}%
 }
