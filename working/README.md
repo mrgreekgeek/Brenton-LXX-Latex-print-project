@@ -1,0 +1,1 @@
+These files are just some sections copied from the main file (`concatenated.tex`). It takes a long time to run Latex on the whole LXX, so we use these working files for quick tests. These are not always up to date, so don't depend on them for anything. `Brenton.tex` in the root directory is the ultimate source of truth for this repo. 
