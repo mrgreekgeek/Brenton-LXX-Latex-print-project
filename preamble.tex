@@ -12,6 +12,12 @@
 \usepackage{hyperref} % Make the TOC clickable
 \usepackage{fontspec}
 \setmainfont{Gentium Plus}
+
+% % Use a different font for Greek (with Latin fallback)
+% % https://tex.stackexchange.com/a/619560/319804
+% \directlua{luaotfload.add_fallback("myfallback",{"Gentium Plus:mode=harf;",})}
+% \setmainfont{GFS Porson}[RawFeature={fallback=myfallback}]
+
 \flushbottom
 \frenchspacing % stops extra space after a period or colon
 \hyphenpenalty=2000
@@ -46,7 +52,7 @@
 % https://tex.stackexchange.com/a/28518/319804
 \addto\captionsgreek{%
   \renewcommand{\contentsname}%
-    {ORDER OF BOOKS}%
+    {Order of Books}%
 }
 
 % Center the TOC title
