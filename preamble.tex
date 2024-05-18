@@ -6,8 +6,6 @@
 \usepackage{microtype} % helps with formatting
 \usepackage{emptypage}
 \usepackage[greek]{babel}
-% \usepackage{parskip}
-% \setlength{\parskip}{3mm plus.75mm minus.75mm}
 \usepackage[all]{nowidow}
 \usepackage{ragged2e} % Nicer ragged edges. Use \Center to get nice balanced lines
 \usepackage{bookmark} %add PDF bookmarks for each \chapter
@@ -21,8 +19,7 @@
 \setlength{\parindent}{.2in} % Set paragraph indentation
 
 \usepackage{titlesec}
-% Remove chapter numbering
-\renewcommand{\thechapter}{}
+\renewcommand{\thechapter}{} % remove numbers from chapter
 % Show chapter titles with a line after them
 \titleformat{\chapter}[display]
 {\filcenter\normalfont\Huge}{}{0pt}{}
@@ -47,22 +44,26 @@
     \penalty10000% Don't break after this heading
 }
 
+% Set up chapter/verse references in headers
+% https://tex.stackexchange.com/a/657575/319804
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhf{}
-\fancyhead[ER,LO]{\leftmark}
-\fancyhead[EL,OR]{\rightmark} % the chapter numbers defined in \ch
+\newcounter{mychapter}
+\newcounter{verse}
+\def\book{}
+\fancyhead{}
+\fancyhead[LE]{\rightmark}
+\fancyhead[OR]{\leftmark}
+\fancyfoot{}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}} % Put the name of the chapter in the header
-
-\newcommand{\vs}[1]{%
-    \begin{textsuperscript}%
-        {#1}%
-    \end{textsuperscript}%
-}
 
 \newcommand{\ch}[1]{%
-    \markright{Chapter #1}%
-    \textbf{#1}%
+  \setcounter{mychapter}{#1}%
+  \markboth{\book\ \themychapter:1}{\book\ \themychapter:1}%
+  \textbf{#1}%
+}
+\newcommand{\vs}[1]{%
+  \textsuperscript{#1}%
+  \markboth{\book\ \themychapter:#1}{\book\ \themychapter:#1}%
 }

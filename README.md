@@ -14,6 +14,6 @@ The digital Brenton LXX text is sourced from [ebible.org](https://ebible.org/Scr
 
 ## TODO 
 - [x] Add book names to the running header
-- [ ] Add chapter:verse references to the running header like most Bibles have 
+- [x] Add chapter:verse references to the running header like most Bibles have 
 - [ ] Keep all Psalm headings with the following paragraphs
 - [ ] Add front matter (copyright, editor, year, etc)

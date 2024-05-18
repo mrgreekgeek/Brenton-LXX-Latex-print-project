@@ -35,7 +35,7 @@ with open(sys.argv[1], "r", encoding="utf-8") as input:
         latex = re.sub(r'\n\\VS\{2\}(ὁπότε ἐνεπύρισε .*?\.)', r' \1', latex) # Remove verse number from Psalm 59 header
 
         # Set up chapter names and multi-columns
-        latex = re.sub(r'\{\\MT (.*)', r'\\end{multicols}\n\\chapter{\1}\n\\begin{multicols}{2}', latex, flags=re.M)
+        latex = re.sub(r'\{\\MT (.*)', r'\\end{multicols}\n\\def\\book{\1}\n\\chapter{\1}\n\\begin{multicols}{2}', latex, flags=re.M)
 
         latex = re.sub(r'ChapOne\{1\}', r'ch{1}', latex, flags=re.M)
         latex = re.sub(r'OneChap', r'ch{1}', latex, flags=re.M)
