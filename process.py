@@ -63,4 +63,7 @@ with open(sys.argv[1], "r", encoding="utf-8") as input:
         latex = re.sub(r'VS(\{\d+|\d+[a-z]\})', r'vs\1', latex, flags=re.M)
         latex = re.sub(r'\{\\PP ', r'\n', latex, flags=re.M)
 
+        # Keep psalm headings together with next verse
+        latex = re.sub(r'\\psalmheading(\{\\ch\{\d+\}.*?\})(\n|)(.*?\n)', r'\\begin{psalmhead}\1\2\3\\end{psalmhead}\n', latex, flags=re.M)
+
         output.write(HEAD + latex + FOOT)

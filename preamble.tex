@@ -68,3 +68,14 @@
 }
 
 \let\biblebook\chapter % rename \chapter so it's not confusing
+
+\newenvironment{psalmhead}[1]{%
+    \par\addvspace{\baselineskip}%
+    \noindent%
+    \begin{minipage}[b]{\columnwidth}%
+        \begin{Center}%
+            {#1}%
+        \end{Center}%
+}{%
+    \end{minipage}%
+}
