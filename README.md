@@ -2,6 +2,9 @@
 
 This repository's purpose is to make Brenton's Septuagint available in print-ready format for free. If you do a search for printed Septuagint Bibles online, you will quickly find that they are very large and heavy and quite expensive. We want to change that! This edition is designed to be as compact as possible, and the price can't be beat. :) 
 
+## Download
+If you just want the most up to date version of the PDF file, click here to download it. [**Brenton LXX PDF**](https://github.com/mrgreekgeek/Brenton-LXX-Latex-print-project/releases/latest/download/Brenton.pdf)
+
 ## Details
 **Brenton.pdf**  
 The main files in this repo are `Brenton.tex` and `Brenton.pdf`. If you want to print a book of your own, just download the latest release of [Brenton.pdf](https://github.com/mrgreekgeek/Brenton-LXX-Latex-print-project/releases/latest/download/Brenton.pdf) and send it to your local print shop or your favorite self-publishing company. I have used [Snowfall Press](https://www.snowfallpress.com/) with good results. (Choose their lightest paper, "White, 40# / 13LB Bond" as that will help keep the size and weight of the book down.)
