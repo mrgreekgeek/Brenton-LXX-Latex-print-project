@@ -10,7 +10,9 @@ HEAD = r"""\input{preamble.tex}
 \begin{spacing}{1.1}
 \maketitle
 
+\pagestyle{empty}
 \tableofcontents
+\pagestyle{fancy}
 
 \begin{multicols}{2}
 """

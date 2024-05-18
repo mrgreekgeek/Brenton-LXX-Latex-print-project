@@ -37,6 +37,22 @@
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % Add leader dots for chapters
 \setlength{\cftbeforechapskip}{1pt} % Adjust the space before each TOC chapter entry
 
+% Adjust the width of the TOC
+\renewcommand{\cftchapafterpnum}{\hspace*{9em}} % increase right margin
+\setlength{\cftchapindent}{9em} % increase left margin
+\setlength{\cftchapnumwidth}{0em} % remove space reserved for chapter numbers
+
+% Change the title for the TOC
+% https://tex.stackexchange.com/a/28518/319804
+\addto\captionsgreek{%
+  \renewcommand{\contentsname}%
+    {ORDER OF BOOKS}%
+}
+
+% Center the TOC title
+\renewcommand{\cfttoctitlefont}{\hfill\huge}
+\renewcommand{\cftaftertoctitle}{\hfill\hfill}
+
 \newcommand{\psalmheading}[1]{%
     \begin{Center}%
         {#1}%
